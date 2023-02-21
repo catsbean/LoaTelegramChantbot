@@ -36,7 +36,7 @@ def call_api(server_number, cards):
             if c["card"] == p:
                 created_time = int(c["created_at"][-8:-6])
                 if created_time == now.hour:
-                    card_list += f"{p} {c['continent']} {c['zone']} {c['created_at']}\n"
+                    card_list += f"{p} {c['continent']} {c['zone']} {now.hour + 9}시 떠상\n"
                     print(card_list)
 
     return card_list
